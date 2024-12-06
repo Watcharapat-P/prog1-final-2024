@@ -1,7 +1,7 @@
 import turtle
 
 class seven_segments:
-    def __init__(self, my_turtle, color):
+    def __init__(self, my_turtle, color, dt):
         turtle.speed(0)
         turtle.tracer(0)
         turtle.hideturtle()
@@ -13,6 +13,7 @@ class seven_segments:
         my_turtle.goto(0, 0)
         my_turtle.pensize(10)
         self.my_turtle = my_turtle
+        self.dt = dt
 
     def draw(self, digit):
         if digit == 0:
@@ -142,19 +143,13 @@ class seven_segments:
         while time.time() - start < dt:
             pass
 
-    def run(self, dt):
+    def runs(self):
         while True:
             for i in range(0, 10):
                 self.clear()
                 self.draw(i)
-                self.my_delay(dt)
+                self.my_delay(self.dt)
                 turtle.update()
 
-
-Tom = turtle.Turtle()
-tom_color = (255, 0, 0)
-dt = 0.2
-s1 = seven_segments(Tom, tom_color)
-s1.run(dt)
 
 

@@ -37,7 +37,7 @@ class Run_ball:
             turtle.forward(2*self.canvas_height)
             turtle.left(90)
 
-    def run(self):
+    def runb(self):
         self.random_attr()
         while True:
             turtle.clear()
@@ -49,7 +49,4 @@ class Run_ball:
             turtle.update()
 
 
-r1 = Run_ball(5, 0.2)
-r1.run()
-# hold the window; close it by clicking the window close 'x' mark
-turtle.done()
+
